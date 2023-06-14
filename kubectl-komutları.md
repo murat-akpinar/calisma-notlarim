@@ -1,13 +1,5 @@
 # Kubectl Komutları
 
-Anahtar Kelimeler: kubernetes
-Created time: April 6, 2023 4:15 AM
-Etiket: Komutlar
-ID: 3
-Konu: k8s komutları
-Status: In Progress
-Status 2: In progress
-
 - **Pod Döngüsü**
     
     Eğer podların üstünde çalıştığı node bozulursa o pod’a ulaşamayız.
