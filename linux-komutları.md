@@ -153,7 +153,7 @@ hem bash kullanan hem adı bigboss olnları getirir
     **`vboxmanage list natnets` | virtualbox ip listesi NAt ağı için**
     
 - Root Şifresi Değiştirme
-    - Canlı Disk Üzerinden
+    - Canlı Disk Üzerinden(Arch Linux komutları)
         
         Archlinux iso sisteme takıyoruz ve başlatıyoruz
         
