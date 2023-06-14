@@ -1,2 +1,2 @@
-# calisma-notlarim
-Konu özetleri ve kod notları
+# Çalışırken Aldığım Notlar ve işme Yarayacak Kodları Derledim
+
