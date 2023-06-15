@@ -75,11 +75,15 @@ kubectl get --all |
 
 kubectl get pods -o wide | 
 
+<br><br>
+
 - **Kubernet Network**
     
     Kubernet kendi içinde bir network çözümü sunmuyor bunu CNI standartında olduğunu belitir ve internetten çeşitli pluginleri dahil ederek çözebiliriz. (**[calico](https://github.com/projectcalico/calico))**
     
     [https://github.com/containernetworking/cni](https://github.com/containernetworking/cni)
+
+  <br><br>
     
 - **Rollback**
     
@@ -94,16 +98,22 @@ kubectl get pods -o wide |
     `kubectl rollout history deployment` deployment-ismi | önce ki versiyonları listeler. `--version=`Revison numarası ile o versiyonun içeriğini görebiliriz.
     
     `kubectl rollout undo doployment` doployment-ismi `--to-revision=`Revison numarası | istediğimiz önce ki versiyonuna dönebiliriz.
+
+  <br><br>
     
 - **Rollout durdurma, izleme, devam Ettirme**
     
     `kubectl rollout pause deployment` deployment-ismi | Yaptığımız bir değişiklik ile yeni replica set oluştururken bu komutu yazdığımız an durdurur. `resume` ile devam ettirilir.
     
     `kubectl rollout status deployment` deployment-ismi | deployment sırasını izleyebiliriz replikaların yapılışını tek tek adım adım gösterir.
+
+  <br><br>
     
 - **ReplicaSet**
     
-    çalışan replika pod setlerinin kararlı bir halde kalması için çalışır. Manul yapmak yerine deployment ile otomatik replicaset oluşturur. Replicaset dosyasında yapılan güncellemeler replicaset ile yaratılmış podları değiştirmez.  Yeni pod oluşturulurken güncel yaml dosyasında ki değişikliklere göre yaratır.
+    çalışan replika pod setlerinin kararlı bir halde kalması için çalışır. Manuel yapmak yerine deployment ile otomatik replicaset oluşturur. Replicaset dosyasında yapılan güncellemeler replicaset ile yaratılmış podları değiştirmez.  Yeni pod oluşturulurken güncel yaml dosyasında ki değişikliklere göre yaratır.
+
+  <br><br>
     
 - **Deployment**
     
@@ -124,6 +134,8 @@ kubectl get pods -o wide |
     `kubectl delete deployments` denemedeployment | deployments sileriz ve ona bağlı yaratılmış podlarda silinir.
     
     yaml dosyasında “template:” altında bölüme image, container bilgilerini gireriz. “kind:” Bölümüne Deployment veririz. Bu oluşturduğumuz yaml dosyalarında ki en önemli diğer şey Label bölümleri, çünkü ayrı ayrı “deployment” objelerimiz olacak ve ona bağlı podları label bölümleri ile kontrol ediyor.
+
+  <br><br>
     
 - **Listeleme Kodları**
     
@@ -146,6 +158,8 @@ kubectl get pods -o wide |
     `kubectl get pods -l “app in (fisrtapp), tier notin (frontend)” --show-labels` | app labeli firstapp olanları fakat tier labeli frontend olmayanları listeliyor.
     
     `kubectl get rs` | replica setleri listeler
+
+  <br><br>
     
 - **Namespace**
     
@@ -170,6 +184,8 @@ kubectl get pods -o wide |
         `kubectl create namespace` namespace-ismi | namespace oluşturma kodu
         
         `kubectl delete namespace` namespace-ismi | namespace siler ona bağlı olan objelerde silinir dikkatli olun.
+
+      <br><br>
         
 - **Port Komutları**
     
@@ -181,7 +197,9 @@ kubectl get pods -o wide |
     
     `kubectl exec -it` pod-ismi --/bin/bash | pod bağlanabiliyoruz.
     
-    kubectl exec -it podismi -n 
+    kubectl exec -it podismi -n
+
+  <br><br>
     
 - **İzleme Komutları**
     
@@ -190,6 +208,8 @@ kubectl get pods -o wide |
     `kubectl get pods -w` | podsların ekrana çıktısını verir ve güncellemelerde değişikiği direkt görebiliriz -w sayesinde.
     
     `watch kubectl get pods` | pod listesini sürekli izleriz.
+
+  <br><br>
     
 - **Pod oluşturma ve silme**
     
