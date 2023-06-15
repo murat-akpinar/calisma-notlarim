@@ -1,17 +1,22 @@
 ### PostgreSQL Komutları
+<br>
 
 
- ## ${{\color{red}Listeleme}}\ Komutları$
+ ## Listeleme Komutları
 
 - SELECT sütun-ismi FROM tablo-ismi | belirlediğiniz tabloda ki belirlediğiniz sütunda ki bilgileri getirir.
-
 - SELECT customer_id, first_name, last_name FROM customer; | customer tablosunda ki id, first-name ve last-name bilgilerini getirir.
+- 
+<br>
 
- ## ${{\color{red}Ekleme}}\ Komutları$
+ ## Ekleme Komutları
+-
+<br>
 
+ ## Silme Komutları
 -
 
- ## ${{\color{red}Silme}}\ Komutları$
+<br>
 
--
-
+## Değiştirme Komutları
+- 
