@@ -228,10 +228,14 @@ kubectl get pods -o wide |
     ```
     
     `kubectl delete pods` pod-ismi | pod silmek için
+
+  <br><br>
     
 - **nodeSelector (hangi nod üzerinde build edileceği) NODE**
     
     hddtype: ssd | Bu podu “hddtype: ssd” olan bir node da yaratmasını sağlar. Bu tür labeler ile podlarımızı belirli nodlarda yaratılmasını sağlarız. Pod yaml dosyası oluşturulurken “nodeSelector:” bölümü “spec” bölümünde belitilmeli.
+
+  <br><br>
     
 - **Label ekleme silme**
     
@@ -244,6 +248,8 @@ kubectl get pods -o wide |
     `kubectl label --overwrite pods pod-ismi label=`yeni-değeri | (app=yeni-değer) yazarak label kısmını günceleriz.
     
     `kubectl label pods --all` foo=bar | bütün podlara “foo=bar” labelini ve değerini ekler.
+
+  <br><br>
     
 - **örnek.yaml dosyasın da ki kullanılan kodlar ve açıklamaları**
     
