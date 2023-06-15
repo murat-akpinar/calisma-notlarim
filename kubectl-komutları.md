@@ -1,6 +1,7 @@
-# Kubectl Komutları
+### Kubectl Komutları
 
-- **Pod Döngüsü**
+
+ - ## Pod Döngüsü
     
     Eğer podların üstünde çalıştığı node bozulursa o pod’a ulaşamayız.
     
@@ -61,7 +62,7 @@
 
 `kubectl config use-context` cluster-isim | clusterlar arasında geçiş, google ve aws de cluster varsa onlara geçmek için kullanıyoruz
 
-**`kubectl label node` node-name `[node-role.kubernetes.io/`rol-ismi`=`](http://node-role.kubernetes.io/rol-ismi=)**rol-ismi  **|** nodların ROLES kısmına değer verme. **NODE**
+`kubectl label node` node-name `[node-role.kubernetes.io/`rol-ismi`=`](http://node-role.kubernetes.io/rol-ismi=)**rol-ismi |nodların ROLES kısmına değer verme.
 
 `kubectl edit pods` pod-ismi | ile pod shell ekranında yaml dosyası hali ile önümüze gelir ve değişiklikler yapabilriz. Bunu yaml dosyasını editleyip sonra kubectl apply -f yaparak çalıştırrsakta aynı şeyi yapar. Fakat edit ile yapılan değişiklikler yaml dosyasına kayıt olmuyor.
 
@@ -77,7 +78,7 @@ kubectl get pods -o wide |
 
 <br><br>
 
-- **Kubernet Network**
+- ## Kubernet Network
     
     Kubernet kendi içinde bir network çözümü sunmuyor bunu CNI standartında olduğunu belitir ve internetten çeşitli pluginleri dahil ederek çözebiliriz. (**[calico](https://github.com/projectcalico/calico))**
     
@@ -85,7 +86,7 @@ kubectl get pods -o wide |
 
   <br><br>
     
-- **Rollback**
+- ## Rollback
     
     `Recreate` : Bu durumda değişiklikler yapıldığında çalışan podların hepsi silinip yeniden yeni podlar yapılır. 
     
@@ -101,7 +102,7 @@ kubectl get pods -o wide |
 
   <br><br>
     
-- **Rollout durdurma, izleme, devam Ettirme**
+- ## Rollout durdurma, izleme, devam Ettirme
     
     `kubectl rollout pause deployment` deployment-ismi | Yaptığımız bir değişiklik ile yeni replica set oluştururken bu komutu yazdığımız an durdurur. `resume` ile devam ettirilir.
     
@@ -109,13 +110,13 @@ kubectl get pods -o wide |
 
   <br><br>
     
-- **ReplicaSet**
+- ## ReplicaSet
     
     çalışan replika pod setlerinin kararlı bir halde kalması için çalışır. Manuel yapmak yerine deployment ile otomatik replicaset oluşturur. Replicaset dosyasında yapılan güncellemeler replicaset ile yaratılmış podları değiştirmez.  Yeni pod oluşturulurken güncel yaml dosyasında ki değişikliklere göre yaratır.
 
   <br><br>
     
-- **Deployment**
+- ## Deployment
     
     Podlar kübernetes en temel yapı birimi. Genellikle tekil podlar yaratılmaz çünkü daha sonra ki güncellemeler ve değişiklikleri tek tek yapmak oldukça zor olacaktır bu yüzden. Podları yöneten üst seviye objeler yaratırız ve podlar bu objeler tarafından yönetilir.
     
@@ -137,7 +138,7 @@ kubectl get pods -o wide |
 
   <br><br>
     
-- **Listeleme Kodları**
+- ## Listeleme Kodları
     
     `kubectl get nodes` | nodları listeler
     
@@ -161,7 +162,7 @@ kubectl get pods -o wide |
 
   <br><br>
     
-- **Namespace**
+- ## Namespace
     
     Açıklama : Bu bölümler cluster kaynaklarını birden çok kullanıcı arasında bölmenin bir yoludur. Farklı ekipler için çalışacakları nodlar için namespace isimleri veririz. Böylece bu ekipler için erişim izninleri ve kota ayarlamaları kolaylıkla yapabiliriz. Kubernets kurulumunda varsayılan olarak bu namespaceler otomatik oluşur.
     
@@ -187,11 +188,11 @@ kubectl get pods -o wide |
 
       <br><br>
         
-- **Port Komutları**
+- ## Port Komutları
     
     `kubectl port-forward pod`/podismi 8080:80 | port yönlendirmesi
     
-- **Exec ile pod’a bağlanma**
+- ## Exec ile pod’a bağlanma
     
     `kubectl exec` pod-ismi --komut | podun içinde komut çalıştırıyor.
     
@@ -201,7 +202,7 @@ kubectl get pods -o wide |
 
   <br><br>
     
-- **İzleme Komutları**
+- ## İzleme Komutları
     
     `kubectl logs` pod-ismi |  logların direkt çıktısını verir “-f” parametresini veirsek canlı olarak izleriz.
     
@@ -211,7 +212,7 @@ kubectl get pods -o wide |
 
   <br><br>
     
-- **Pod oluşturma ve silme**
+- ## Pod oluşturma ve silme
     
     `kubectl apply -f` pods01.yaml | ile yaml dosyasından pod oluşturma.
     
@@ -231,13 +232,13 @@ kubectl get pods -o wide |
 
   <br><br>
     
-- **nodeSelector (hangi nod üzerinde build edileceği) NODE**
+- ## nodeSelector (hangi nod üzerinde build edileceği)
     
     hddtype: ssd | Bu podu “hddtype: ssd” olan bir node da yaratmasını sağlar. Bu tür labeler ile podlarımızı belirli nodlarda yaratılmasını sağlarız. Pod yaml dosyası oluşturulurken “nodeSelector:” bölümü “spec” bölümünde belitilmeli.
 
   <br><br>
     
-- **Label ekleme silme**
+- ## Label ekleme silme
     
     `kubectl label pods pod-ismi label=`label-değeri |  (app=webapp) pod’a label ekleme
     
