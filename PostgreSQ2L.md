@@ -48,9 +48,9 @@ Ayrıca sütun isimleri yerine, sütun numaraları da kullanılabilirsin “ ORD
 
 ## Escape Karakter
 
-SELECT E’I\’m a sql’; veya SELECT ‘I’’m a sql’;
+SELECT E’I\’m a sql’;
+SELECT ‘I’’m a sql’;
 
-SELECT $$’I’m a sql’$$;
 
 ## Mantıksal İfadeler ve Operatörler
 
