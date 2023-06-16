@@ -1,8 +1,8 @@
 i = insert mod | v = visual mod | / = search modu
 
-`:q!` kayıt etmeden çık | ZQ
-`:wq` kayıt ederek çıkıyor | ZZ
-`:w` kayıt et devam et |
+`:q!` kayıt etmeden çık : `ZQ` <br>
+`:wq` kayıt ederek çıkıyor : `ZZ` <br>
+`:w` kayıteder fakat dosyayı kapatmaz.
 
 `x` imlecin tersine doğru siler
 `A` tuşuna basarsak . işaretinden sonraya atar ve insert moduna geçer
