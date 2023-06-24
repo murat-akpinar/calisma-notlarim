@@ -24,4 +24,4 @@ toplu docker ps silme “ `docker container rm $(docker container ls -aq)` “
 
 `docker exec -it container-id /bin/bash`  | container içine gireriz
 
-`docker inspect --format="{{.Id}} container-ismi"` | Container ID full halini verir
+`docker inspect --format="{{.Id}}" container-ismi` | Container ID full halini verir
