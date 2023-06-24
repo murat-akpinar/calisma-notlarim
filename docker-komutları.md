@@ -23,3 +23,5 @@ toplu docker ps silme “ `docker container rm $(docker container ls -aq)` “
 `docker-compose up -d` | docker compos .yml çalıştırır.
 
 `docker exec -it container-id /bin/bash`  | container içine gireriz
+
+`docker inspect --format="{{.Id}} container-ismi"` | Container ID full halini verir
