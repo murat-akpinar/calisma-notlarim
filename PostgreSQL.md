@@ -28,7 +28,7 @@ SELECT first_name | | ' ' | | last_name | | ' - ' | | title  FROM actor, film
 ```
 
 ```sql
-SELECT first_name | | ‘ ’ | | last_name, maas, maas* 1.35 FROM calisanlar
+SELECT first_name | | ' ' | | last_name, maas, maas* 1.35 FROM calisanlar
 --çalışanlar tablosunda ki insanların first_name ve last_name birleştirir. Maaşların normal hali ve %35 zam almış halini de gösterir.
 ```
 
