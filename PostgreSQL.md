@@ -23,12 +23,12 @@ SELECT title, length / 60 FROM film
 ## Tablo Birleştirme Komutu
 
 ```sql
-SELECT first_name | | ' ' | | last_name | | ' - ' | | title  FROM actor, film
+SELECT first_name || ' ' || last_name || ' - ' || title  FROM actor, film
 --actor ve film tablolarından verileri first_name, last_name ve title sütunlarını alıp birleştirir. 
 ```
 
 ```sql
-SELECT first_name | | ' ' | | last_name, maas, maas* 1.35 FROM calisanlar
+SELECT first_name || ' ' || last_name, maas, maas* 1.35 FROM calisanlar
 --çalışanlar tablosunda ki insanların first_name ve last_name birleştirir. Maaşların normal hali ve %35 zam almış halini de gösterir.
 ```
 
@@ -52,7 +52,7 @@ SELECT * FROM payment WHERE price >= 50
 ### Alias Komutu
 
 ```sql
-SELECT first_name | | ' ' | | last_name as Calisanlar, salary as Eskimaas, salary * 1.35 as Zamlımaas
+SELECT first_name || ' ' || last_name as Calisanlar, salary as Eskimaas, salary * 1.35 as Zamlımaas
 FROM employees
 --Aliaslar ile getirdiğimiz sütunların isimlerini değiştirebiliriz. Böylece daha okunabilir.
 ```
