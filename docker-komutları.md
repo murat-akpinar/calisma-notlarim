@@ -25,3 +25,15 @@ toplu docker ps silme “ `docker container rm $(docker container ls -aq)` “
 `docker exec -it container-id /bin/bash`  | container içine gireriz
 
 `docker inspect --format="{{.Id}}" container-ismi` | Container ID full halini verir
+
+
+
+network'e bağlı contailarları listleer
+````bash
+docker network inspect --format='{{range .Containers}} {{.Name}} {{end}}' network-ismi
+````
+
+contaiların ip adresini verir
+````bash
+docker inspect -f '{{range .NetworkSettings.Networks}} {{.IPAddress}}{{end}}' container-ismi
+````
